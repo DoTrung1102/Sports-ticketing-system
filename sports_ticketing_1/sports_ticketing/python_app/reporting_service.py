@@ -1,5 +1,4 @@
 """
-reporting_service.py - Báo cáo (mô hình 5 bảng)
 Dữ liệu bán vé lấy từ bảng Seats (Status='Sold')
 """
 from database import Database
