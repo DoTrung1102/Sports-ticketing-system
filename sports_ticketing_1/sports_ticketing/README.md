@@ -1,10 +1,7 @@
-# 🏟️ PROJECT 16 — SPORTS TICKETING MANAGEMENT SYSTEM
+ PROJECT 16 — SPORTS TICKETING MANAGEMENT SYSTEM
 
-> Đồ án môn CSDL — DATCOM Lab, NEU-College of Technology
+> Final project, NEU-College of Technology
 > **Tech stack:** MySQL 8.0+, Python 3.10+
-
-Hệ thống quản lý bán vé sự kiện thể thao theo mô hình **5 bảng** đúng yêu cầu đề bài.
-
 ---
 
 ## 📐 MÔ HÌNH 5 BẢNG
@@ -30,13 +27,13 @@ Seats:
 ```
 
 **Đánh đổi:**
-- ✅ Đúng 5 bảng
-- ✅ Đơn giản, dễ truy vấn
-- ⚠️ Không lưu lịch sử nếu ghế bị hủy rồi bán lại
+- Đúng 5 bảng
+- Đơn giản, dễ truy vấn
+- Không lưu lịch sử nếu ghế bị hủy rồi bán lại
 
 ---
 
-## 📁 Cấu trúc thư mục
+#Cấu trúc thư mục
 
 ```
 sports_ticketing/
@@ -49,7 +46,7 @@ sports_ticketing/
 │   ├── 05_functions.sql            ← 5 user-defined functions
 │   ├── 06_triggers.sql             ← 5 triggers
 │   ├── 07_security.sql             ← Roles, users, mã hóa, backup
-│   └── er_diagram.md               ← Sơ đồ ER (Mermaid)
+│
 ├── python_app/
 │   ├── requirements.txt
 │   ├── .env.example
@@ -67,7 +64,7 @@ sports_ticketing/
 
 ---
 
-## 🚀 CÀI ĐẶT NHANH
+##CÀI ĐẶT NHANH
 
 ### 1. Tạo database
 
@@ -102,7 +99,7 @@ python main.py
 
 ---
 
-## 🎯 CHỨC NĂNG
+#CHỨC NĂNG
 
 | Menu | Mô tả |
 |---|---|
@@ -114,7 +111,7 @@ python main.py
 
 ---
 
-## 🗃️ ĐỐI TƯỢNG DATABASE
+#ĐỐI TƯỢNG DATABASE
 
 ### Indexes (10)
 - `idx_seats_event_status` — quan trọng nhất, truy vấn ghế còn trống
@@ -157,7 +154,7 @@ python main.py
 
 ---
 
-## 🔐 BẢO MẬT
+#BẢO MẬT
 
 **4 roles:**
 - `role_admin` — toàn quyền
@@ -171,7 +168,7 @@ python main.py
 
 ---
 
-## 🧪 TEST NHANH
+#TEST NHANH
 
 ```sql
 USE sports_ticketing;
@@ -202,17 +199,9 @@ SELECT SeatID, Status FROM Seats WHERE SeatID=1;  -- → 'Cancelled'
 
 ---
 
-## 📊 SCREENSHOTS GỢI Ý CHO BÁO CÁO
-
-1. EER Diagram xuất từ MySQL Workbench (5 bảng)
-2. Cửa sổ console khi chạy `python main.py` (Dashboard / báo cáo)
-3. `SHOW GRANTS FOR 'cashier_user'@'localhost'` — chứng minh phân quyền
-4. View `v_revenue_by_event` chạy thực tế
-5. Output trước/sau khi gọi `sp_book_ticket` để chứng minh trigger
-
 ---
 
-## 🔮 PHÁT TRIỂN TIẾP
+#PHÁT TRIỂN TIẾP
 
 - Tích hợp mã QR cho vé điện tử (`qrcode` library)
 - Tích hợp VNPay/Momo thanh toán online
