@@ -1,5 +1,5 @@
 """
-ui.py - Console menu (mô hình 5 bảng)
+ui.py - Console menu 
 """
 from datetime import datetime
 from tabulate import tabulate
