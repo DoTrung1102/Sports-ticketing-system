@@ -4,7 +4,7 @@
 > **Tech stack:** MySQL 8.0+, Python 3.10+
 ---
 
-## 📐 MÔ HÌNH 5 BẢNG
+# MÔ HÌNH 5 BẢNG
 
 | # | Bảng | Vai trò |
 |---|---|---|
