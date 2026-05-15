@@ -1,5 +1,4 @@
 """
-booking_service.py - Logic nghiệp vụ (mô hình 5 bảng)
 Trong mô hình này, bán vé = UPDATE 1 dòng trong bảng Seats
 SeatID đóng vai trò "transaction ID"
 """
@@ -9,9 +8,6 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-# =====================================================================
-# EVENT SERVICE
-# =====================================================================
 class EventService:
 
     @staticmethod
@@ -40,9 +36,6 @@ class EventService:
         """, (limit,))
 
 
-# =====================================================================
-# CUSTOMER SERVICE
-# =====================================================================
 class CustomerService:
 
     @staticmethod
@@ -81,9 +74,6 @@ class CustomerService:
         """, (customer_id, customer_id, customer_id))
 
 
-# =====================================================================
-# BOOKING SERVICE - thao tác trên bảng Seats
-# =====================================================================
 class BookingService:
 
     @staticmethod
@@ -140,9 +130,6 @@ class BookingService:
         """, (seat_id,))
 
 
-# =====================================================================
-# BOX OFFICE SERVICE
-# =====================================================================
 class BoxOfficeService:
 
     @staticmethod
